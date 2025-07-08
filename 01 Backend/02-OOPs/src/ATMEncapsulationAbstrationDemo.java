@@ -3,12 +3,12 @@ public class ATMEncapsulationAbstrationDemo {
     private double balance;
 
     ATMEncapsulationAbstrationDemo(String name, double balance) {
-        this.name = name;
+        this.name = name; // instance variable = local variable
         this.balance = balance;
     }
 
     public static void main(String[] args) {
-        ATMEncapsulationAbstrationDemo atmEncapsulationAbstrationDemo = new ATMEncapsulationAbstrationDemo("Ronak", 100000);
+        ATMEncapsulationAbstrationDemo atmEncapsulationAbstrationDemo = new ATMEncapsulationAbstrationDemo("Ronak", 1);
         atmEncapsulationAbstrationDemo.showBalance();
     }
 

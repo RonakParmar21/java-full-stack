@@ -1,8 +1,5 @@
 package SuperKeyword;
 
-import javax.swing.*;
-import java.util.Locale;
-
 class Parent {
     String name;
     void details() {
@@ -11,7 +8,6 @@ class Parent {
 }
 public class Child extends Parent {
     String name;
-
     void details() {
         super.name = "Parent";
         name = "child";
