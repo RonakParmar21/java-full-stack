@@ -4,7 +4,7 @@ public class ATM {
     public static void main(String[] args) {
         try {
             //withdraw(100, 1000);
-            withdraw(10000, 10);
+            withdraw(10000, 210000);
         } catch (InsuffiecientBalance e) {
             System.out.println(e.getMessage());
         }

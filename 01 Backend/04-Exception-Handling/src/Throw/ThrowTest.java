@@ -6,6 +6,7 @@ public class ThrowTest {
             withdraw(1000, 2000);
         } catch (Exception e) {
             System.out.println("Error " + e.getMessage());
+            System.out.println(e);
         }
     }
 
