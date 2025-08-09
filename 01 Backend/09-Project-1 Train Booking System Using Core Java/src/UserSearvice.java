@@ -19,7 +19,6 @@ public class UserSearvice {
         User user = new User(userName, userPassword, userFullName, userContact);
         userMap.put(userName, user);
         System.out.println("Registration Successfull!");
-
         return true;
     }
 
@@ -36,7 +35,7 @@ public class UserSearvice {
         }
 
         currentUser = user;
-        System.out.println("Welcome : " + currentUser.getFullName());
+        System.out.println("Welcome : " + currentUser.getFullName() + "! ");
         return true;
     }
 

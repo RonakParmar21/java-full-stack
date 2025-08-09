@@ -27,6 +27,8 @@ public class IRCTCAPP {
                     case 3 -> exitApp();
                     default -> System.out.println("Invalid choice.");
                 }
+            } else {
+                showUserMenu();
             }
         }
     }
@@ -46,6 +48,7 @@ public class IRCTCAPP {
         String userContact = scanner.next();
 
         userSearvice.registerUser(userName, userPassword, userFullName, userContact);
+        userSearvice.loginUser(userName, userPassword);
     }
 
     public void login() {
