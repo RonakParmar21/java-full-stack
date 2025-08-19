@@ -28,7 +28,6 @@ public class App {
                     System.out.print("Enter Vehicle model: ");
                     String model=sc.next();
                     Customer customersBasesOnNum = service.customerService.getCustomersBasesOnNum(phone);
-
                     break;
 
                 case 2:
