@@ -23,9 +23,6 @@ public class JDBCSelectDemo {
                         rs.getInt("id") + " | " + rs.getString("name") + " | " + rs.getInt("age")
                 );
             }
-
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }

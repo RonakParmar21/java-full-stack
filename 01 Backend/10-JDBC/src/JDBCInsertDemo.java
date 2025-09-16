@@ -10,7 +10,7 @@ public class JDBCInsertDemo {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mystd", "root", "admin");
 
             Statement statement = connection.createStatement();
-            String query = "insert into student(id, name, age) values(6, 'parmar', 22)";
+            String query = "insert into student(id, name, age) values(6, 'ronak', 22)";
             int update = statement.executeUpdate(query);
 
             System.out.println("Inserted " + update + " rows");
