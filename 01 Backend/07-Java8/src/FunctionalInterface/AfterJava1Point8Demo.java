@@ -12,7 +12,6 @@ class AfterJava1Point8 {
         AfterJava1Point8Demo aj1p8 = (a, b) -> a + b;
         System.out.println(aj1p8.add(5, 10));
 
-
         // second way with multiple line in functional interface.
         AfterJava1Point8Demo afterJava1Point8Demo = (a, b) -> {
             System.out.print("Lambda Expression : ");
