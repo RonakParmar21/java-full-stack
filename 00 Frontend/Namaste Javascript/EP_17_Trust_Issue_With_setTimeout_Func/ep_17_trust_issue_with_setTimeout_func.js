@@ -15,3 +15,15 @@ while(endDate < startDate + 7000) {
 }
 
 console.log("while loop ended");
+
+
+// what's about setTimeout(()=> {}, 0); ??
+
+console.log("start");
+setTimeout(() => {
+    console.log("callback");
+}, 0);
+
+console.log("end");
+// 
+
