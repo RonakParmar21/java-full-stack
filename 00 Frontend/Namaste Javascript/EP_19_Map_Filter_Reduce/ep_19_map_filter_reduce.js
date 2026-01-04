@@ -105,11 +105,10 @@ console.log(findMax(arr)); // 6
 
 // finding max value using reduce
 const outputReduceMax = arr.reduce((acc, curr) => {
-  if (curr > acc) {
+  if(curr > acc)
     return curr;
-  } else {
+  else
     return acc;
-  }
 }, arr[0]);
 console.log(outputReduceMax); // 6
 
