@@ -272,14 +272,41 @@
 /*
 filter button
 */
-.filter {
+/* ===========================
+   SEARCH + FILTER BAR
+   =========================== */
+
+.search {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  gap: 12px;
+  margin: 24px 20px 10px;
 }
 
-.filter-btn {
-  padding: 10px 20px;
+/* Search Input */
+.search-box {
+  width: 260px;
+  padding: 10px 16px;
+  border-radius: 25px;
+  border: 1px solid #e5e7eb;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.search-box::placeholder {
+  color: #9ca3af;
+}
+
+.search-box:focus {
+  border-color: #ff6f00;
+  box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.15);
+}
+
+/* Search Button */
+.search button {
+  padding: 10px 22px;
   background-color: #ff6f00;
   color: #ffffff;
   border: none;
@@ -291,8 +318,43 @@ filter button
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.filter-btn:hover {
+.search button:hover {
   background-color: #e65c00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.search button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===========================
+   FILTER BUTTON
+   =========================== */
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 20px;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  background-color: #ffffff;
+  color: #ff6f00;
+  border: 2px solid #ff6f00;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn:hover {
+  background-color: #ff6f00;
+  color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
@@ -302,9 +364,110 @@ filter button
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* ===========================
+   MOBILE RESPONSIVE
+   =========================== */
+
 @media (max-width: 480px) {
+  .search {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .search button {
+    width: 160px;
+  }
+
   .filter-btn {
     font-size: 14px;
-    padding: 8px 16px;
+    padding: 8px 18px;
+  }
+}
+
+/* ===========================
+   SHIMMER (Skeleton Loader)
+   =========================== */
+
+.shimmer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.shimmer-cards {
+  background-color: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    #e6e6e6 25%,
+    #f2f2f2 37%,
+    #e6e6e6 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+.shimmer-img {
+  height: 160px;
+}
+
+.shimmer-content {
+  padding: 12px 14px;
+}
+
+.shimmer-title {
+  height: 18px;
+  width: 70%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.shimmer-text {
+  height: 14px;
+  width: 90%;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.shimmer-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shimmer-badge {
+  height: 18px;
+  width: 60px;
+  border-radius: 6px;
+}
+
+.shimmer-time {
+  height: 14px;
+  width: 50px;
+  border-radius: 6px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .shimmer-img {
+    height: 140px;
   }
 }
