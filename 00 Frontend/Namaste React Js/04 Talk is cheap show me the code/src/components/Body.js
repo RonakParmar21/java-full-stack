@@ -32,8 +32,10 @@ const Body = () => {
       jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants,
     ); // this is optional chaining concept
-    setFilteredRestaurant(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants,);
+    setFilteredRestaurant(
+      jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants,
+    );
 
     // console.log(jsonData)
     // console.log(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants[0]?.info?.name);
@@ -86,7 +88,9 @@ const Body = () => {
       </div>
       <div className="rest-container">
         {filteredRestaurant.map((res) => (
-          <FoodCard key={res.info.id} resData={res} />
+          <Link key={res.info.id} to={"/restaurantmenu/" + res.info.id}>
+            <FoodCard resData={res} />
+          </Link>
         ))}
       </div>
     </>
