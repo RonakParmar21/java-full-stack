@@ -3,6 +3,7 @@ import FoodCard from "./FoodCard";
 
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   // local state variable - super powerfull variable
