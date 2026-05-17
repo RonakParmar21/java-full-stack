@@ -36,7 +36,7 @@ class StudentMethodDemo
 
 	public void display()
 	{
-		String name = "Yash";
+		// String name = "Yash";
 		System.out.println("Name "+ name);
 	}
 }

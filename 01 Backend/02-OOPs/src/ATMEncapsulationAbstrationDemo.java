@@ -3,7 +3,7 @@ public class ATMEncapsulationAbstrationDemo {
     private double balance;
 
     ATMEncapsulationAbstrationDemo(String name, double balance) {
-        this.name = name; // instance variable = local variable
+        this.name = name; // instance variable (this.name) = local variable (name)
         this.balance = balance;
     }
 

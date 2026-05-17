@@ -8,7 +8,8 @@ class Parent {
 }
 public class Child extends Parent {
     String name;
-    void details() {
+    @Override
+     void details() {
         super.name = "Parent";
         name = "child";
         System.out.println(super.name + " and " + name);
