@@ -7,7 +7,8 @@ class ArrayPractice {
         }
 
         for(int num : arr) {
-            System.out.println(arr[num]);
+            // System.out.println(arr[num]);
+            System.out.println(num);
         }
     }
 }

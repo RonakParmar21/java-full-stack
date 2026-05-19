@@ -26,6 +26,6 @@ public class StudentThisDemo {
     }
 
     void hello(StudentThisDemo s) {
-        System.out.println("Hello " + s.name);
+        System.out.println("Hello " + s.name + " Your age is : " + s.age);
     }
 }
