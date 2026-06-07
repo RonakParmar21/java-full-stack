@@ -10,6 +10,7 @@ public class Test {
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
         System.out.println("Bean file loaded");
         System.out.println("Sending Request");
+        System.out.println("First call");
         Car car = context.getBean(Car.class);
 
 
