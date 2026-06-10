@@ -1,0 +1,65 @@
+package com.cfs.BooAPI.controller;
+
+import com.cfs.BooAPI.BooApiApplication;
+import com.cfs.BooAPI.entity.Book;
+import org.apache.coyote.Response;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+@RestController
+@RequestMapping("/books")
+public class BookController {
+    private Map<Long, Book> bookDB = new HashMap<>();
+
+    @GetMapping
+    public ResponseEntity<List<Book>> getAllBook() {
+        return ResponseEntity.ok(new ArrayList<>(bookDB.values()));
+    }
+
+    @PostMapping()
+    public ResponseEntity<Book> createBook(@RequestBody Book book) {
+        bookDB.put(book.getId(), book);
+        return ResponseEntity.status(HttpStatus.CREATED).body(book);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Book> getBookById(@PathVariable Long id) {
+        Book book = bookDB.get(id);
+        if(book == null) return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        return ResponseEntity.ok(book);
+    }
+
+    // put:update book fully
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> updateBook(@PathVariable Long id, @RequestBody Book book) {
+        Book existingBook = bookDB.get(id);
+        if(existingBook == null) return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+
+        bookDB.put(id, book);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build(); // 200 OK
+    }
+
+    @PatchMapping("/{id}/price")
+    public ResponseEntity<Book> updatePrice(@PathVariable Long id, @RequestBody Double newPrice) {
+        Book existingBook = bookDB.get(id);
+        if(existingBook == null) return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+
+        existingBook.setPrice(newPrice);
+        bookDB.put(id, existingBook);
+        return ResponseEntity.ok(existingBook);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Book> deleteBook(@PathVariable Long id) {
+        Book existingBook = bookDB.get(id);
+        if(existingBook == null) return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+
+        return ResponseEntity.noContent().build();
+    }
+}
