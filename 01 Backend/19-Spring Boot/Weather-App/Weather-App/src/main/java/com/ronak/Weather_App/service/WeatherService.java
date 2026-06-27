@@ -40,7 +40,7 @@ public class WeatherService {
     }
 
     public WeatherForeCast getForcastData(String city, int days) {
-        WeatherForeCast weatherForeCast = new WeatherForeCast();
+//        WeatherForeCast weatherForeCast = new WeatherForeCast();
         WeatherResponse weatherResponse = getData(city);
         WeatherForeCast response = new WeatherForeCast();
         response.setWeatherResponse(weatherResponse);
