@@ -27,7 +27,7 @@ public class ArrayList {
         System.out.println(nums.size());
 
         // list is empty or not
-        if(nums.isEmpty())
+        if (nums.isEmpty())
             System.out.println("not empty");
         else
             System.out.println("empty");
@@ -39,7 +39,7 @@ public class ArrayList {
         Iterator<Integer> iterator = nums.iterator();
         while (iterator.hasNext()) {
             int data = iterator.next();
-            if(data == 30) {
+            if (data == 30) {
                 System.out.println("Removing 30");
                 iterator.remove();
             } else

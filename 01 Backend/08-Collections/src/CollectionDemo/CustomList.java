@@ -16,11 +16,12 @@ class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        String str = "\nStudent{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", course='" + course + '\'' +
-                '}';
+                "}\n";
+        return str;
     }
 }
 

@@ -21,5 +21,9 @@ public class StackDemo {
         stack.push(70);
 
         System.out.println("Stack is : " + stack);
+        System.out.println("Random access : " + stack.get(3));
+
+        System.out.println(stack.peek()); // get last inserted element
+        System.out.println(stack.search(20)); // give index of this value
     }
 }

@@ -19,9 +19,11 @@ public class LinkedListDemo {
         System.out.println("First element is : " + firstElem);
         System.out.println("Last element is : " + lastElem);
 
+        System.out.println("Random access is : " + linkedList.get(4));
+
         // traverse linked list
         for (int i = 0; i < 5; i++) {
-            System.out.println(linkedList.get(3));
+            System.out.println(linkedList.get(i));
         }
     }
 }

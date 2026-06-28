@@ -8,27 +8,30 @@ public class WrapperClassesDemo {
         System.out.println(i2);
 
         int obj1 = Integer.parseInt("2323"); // "2323 -->
+        System.out.println("OBJ1 is : " + obj1);
+
         boolean aTrue = Boolean.parseBoolean("true");
+        System.out.println("aTrue is : " + aTrue);
 
-        Double d=9.88;
-        int i3=d.intValue();
-
+        Double d = 9.88;
+        int i3 = d.intValue();
         System.out.println(i3);
 
-        Integer k=66;
+        Integer k = 66;
         String ks = k.toString();
+        System.out.println("KS is : " + ks);
 
-        Integer a1=1000;
-        Integer b1=1000;
-        System.out.println(a1==b1);
+        Integer a1 = 1000;
+        Integer b1 = 1000;
+        System.out.println("a1 == b1 is : " + (a1 == b1));
 
-        Integer a=100;
-        Integer b=100;
-        System.out.println(a==b);
+        Integer a = 100;
+        Integer b = 100;
+        System.out.println("a == b is : " + (a == b));
         //Note : -128 -- 127 cache maintain karta hai primitive classes
 
         Integer pa = 128;
         Integer pb = 128;
-        System.out.println(pa.equals(pb)); // will compare content
+        System.out.println("pa.equals(pb) is : " + pa.equals(pb)); // will compare content
     }
 }
