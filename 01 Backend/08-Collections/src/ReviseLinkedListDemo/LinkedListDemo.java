@@ -15,6 +15,9 @@ public class LinkedListDemo {
         String first = list.getFirst();
         String last = list.getLast();
 
+        list.add(3, "Akshar");
+        System.out.println(list);
+
         System.out.println("First Element : " + first);
         System.out.println("Last Element : " + last);
 
