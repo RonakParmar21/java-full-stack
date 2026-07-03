@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- put id="engine" which is name of Engine in car class for implement bean scope byName -->
+    <bean id="engine" class="com.ronak.PetrolEngine" />
+    <bean id="dieselEngine" class="com.ronak.DieselEngine" autowire-candidate="false" />
+    <!-- byName -->
+    <!-- <bean id="car" class="com.ronak.Car" autowire="byName" /> -->
+
+    <!-- byType -->
+    <!-- <bean id="car" class="com.ronak.Car" autowire="byType" /> -->
+
+    <!-- constructor autowire -->
+    <bean id="car" class="com.ronak.Car" autowire="constructor" />
+
+    <!-- no autowire -->
+    <!-- <bean id="car" class="com.ronak.Car" autowire="no" /> -->
+
+</beans>
