@@ -9,4 +9,15 @@
 <!--        <property name="engine" ref="petrolEngine" />-->
         <constructor-arg name="engine" ref="petrolEngine" />
     </bean>
+
+
+    <!-- Revision -->
+    <bean id="carEngine" class="org.revise.PetrolEngine" />
+    <bean id="reviseCar" class="org.revise.Car">
+        <!--
+            - inside car pojo require petrolengine reference so put this
+            - this is called reference ()
+         -->
+        <property name="carEngine" ref="carEngine" />
+    </bean>
 </beans>
