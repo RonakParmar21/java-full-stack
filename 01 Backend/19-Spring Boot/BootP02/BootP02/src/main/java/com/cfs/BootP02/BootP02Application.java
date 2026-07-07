@@ -6,7 +6,7 @@ import org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration;
 
 // if I want to do not auto configure than use this
 //@SpringBootApplication(exclude = {WebMvcAutoConfiguration.class})
-@SpringBootApplication
+@SpringBootApplication // consist of 3 annotation (1. @
 public class BootP02Application {
 
 	public static void main(String[] args) {
